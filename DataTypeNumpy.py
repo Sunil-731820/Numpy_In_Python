@@ -223,4 +223,66 @@ a = np.array([])
 
 #the exponential value of the array using universal function is 
 
-b = np.array()
+b = np.array([0,1,2,3,4])
+exp1 = np.exp(b)
+print("the exponential of the array is ")
+print(exp1)
+
+#the sin of the array is 
+a = np.array([1,2,3,4,5])
+sin1 = np.sin(a)
+print("the sin of the array is ")
+print(sin1)
+
+#Square roo of the array value is 
+squareRoot = np.array([1,2,3,4,5,6,7,8,9])
+root1 = np.sqrt(squareRoot)
+print("the square roo of the each element is ")
+print(root1)
+
+
+#Sorting the array using np.sort()
+
+a = np.array([1,2,13,4])
+sort1 = np.sort(a)
+print("sorting the single dimension array ")
+print(sort1)
+
+a = np.array([[1, 4, 2],
+                 [3, 4, 6],
+              [0, -1, 5]]
+)
+sort2 = np.sort(a)
+print("the sorted array of the two dimension is ")
+print(sort2)
+
+#now sorting the array along the row wise of the array
+print("after the row wise sorting the array is ", np.sort(a,axis=1))
+
+#now sorting the array by specifying the algorithms name
+
+print("after using merge sort the sorted array is " , np.sort(a,kind="mergesort"))
+
+#sorting the array according to the column wise of the array 
+a = np.array([
+                 [1, 4, 2],
+                 [3, 4, 6],
+                 [0, -1, 5]
+])
+print("the array is ",a)
+print("after the array is ", np.sort(a,axis=0))
+
+#Example to show the sorting of the structured array 
+
+dtype = [('name','S10'),('grad_year',int),('cgpa',float)]
+values = [("sunil",2022,9),("harish",2024,8.9),("arti",2026,9.6)]
+#now creating the array
+arr = np.array(values,dtype=dtype)
+print("the array is ")
+print(arr)
+
+print("sorting the array according to name wise")
+print(np.sort(arr,order="name"))
+
+print("again sorting the array according to graduation year and cgpa ")
+print(np.sort(arr,order=["grad_year","cgpa"]))
